@@ -35,6 +35,19 @@ Victory / Defeat
    ↓
 Main Menu
 ```
+Test Package
+
+The test package contains files used for testing and development:
+
+test/
+├── Pakpakin.java
+└── App.java
+
+These files are test files only and are not used to start the final game.
+
+test/Pakpakin.java — testing
+
+test/App.java — testing
 
 ### Database
 
