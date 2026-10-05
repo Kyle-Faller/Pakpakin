@@ -116,3 +116,7 @@ Make sure **MySQL is running in XAMPP before launching the game**, otherwise the
 
 **Pakpakin**  
 A Java-based Flappy Bird-style game project.
+## 👥 Development Team
+
+- **Front-end Developer:** Elaine Tanud-Tanud
+- **Back-end Developer:** Kyle Faller
