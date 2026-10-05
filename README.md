@@ -1,189 +1,118 @@
-# Pakpakin
+# Pakpakin 🐦
 
-## How to Run
+**Pakpakin** is a Java Swing-based Flappy Bird-style game where players control a bird and try to achieve the highest score by avoiding obstacles.
 
-1. Make sure **MySQL is running in XAMPP**.
-2. Make sure the **`pakpakin` database** exists in MySQL.
-3. Make sure the required **MySQL Connector/J** driver is included in the project.
-4. Open the project in VS Code.
-5. Run **`Main.java`**.
+## 🎮 How to Run
 
-### Main Entry Point
+### 1. Install the Requirements
 
-The game starts from:
+Make sure you have:
+
+- Java JDK installed
+- VS Code or another Java IDE
+- XAMPP
+- MySQL Connector/J
+
+### 2. Start XAMPP
+
+Open **XAMPP Control Panel** and start:
+
+- **Apache**
+- **MySQL**
+
+MySQL must be running because Pakpakin uses a database to store game information such as player names and scores.
+
+### 3. Import the Database
+
+The database file is located inside the project's `db` package.
+
+Extract/import the database into MySQL before running the game.
+
+You can import the `.sql` database file using **phpMyAdmin**:
+
+1. Open XAMPP.
+2. Start **Apache** and **MySQL**.
+3. Open phpMyAdmin.
+4. Create or select the `pakpakin` database.
+5. Go to the **Import** tab.
+6. Select the SQL file from the `db` package.
+7. Click **Import**.
+
+### 4. Open the Project
+
+Open the Pakpakin project folder in VS Code.
+
+Make sure the project contains the required packages and files, including:
+
+```text
+Pakpakin/
+├── src/
+│   ├── db/
+│   ├── difficulty/
+│   ├── ui/
+│   └── Main.java
+├── image/
+├── ...
+└── README.md
+```
+
+### 5. Run the Game
+
+Run:
 
 ```text
 Main.java
 ```
 
-You **do not need to run `Name.java`, `Easy.java`, `Medium.java`, `Hard.java`, or the other screens separately**.
+`Main.java` is the **main entry point** of the game.
 
-`Main.java` connects the game's screens together:
+You can run it directly from VS Code using the **Run** button or Java extension.
 
-```text
-Main.java
-   ↓
-Name
-   ↓
-Loading Screen
-   ↓
-Main Menu
-   ↓
-Easy / Medium / Hard
-   ↓
-Victory / Defeat
-   ↓
-Main Menu
-```
+## 🗄️ Database
 
-### Test Package
+Pakpakin uses **MySQL** to store player/game data.
 
-The `test` package contains files used for testing and development:
+Before running the game, make sure:
 
-```text
-test/
-├── Pakpakin.java
-└── App.java
-```
+- XAMPP is running.
+- MySQL is started.
+- The `pakpakin` database has been imported.
+- The MySQL Connector/J driver is included in the project.
+- The database connection settings in the `db` package are correct.
 
-These files are **test files only** and are not used to start the final game.
+## 🕹️ Game Features
 
-- `test/Pakpakin.java` — testing only
-- `test/App.java` — testing only
+- Flappy Bird-style gameplay
+- Multiple difficulty levels
+- Player name entry
+- Score tracking
+- High-score/database system
+- Custom pixel-art graphics
+- Sound effects and background music
+- Java Swing user interface
 
-### Database
+## 🛠️ Technologies Used
 
-Pakpakin uses MySQL to store the player's:
+- **Java**
+- **Java Swing**
+- **MySQL**
+- **XAMPP**
+- **JDBC**
+- **VS Code**
 
-- Name
-- Highest score
+## 📌 Important
 
-The database connection is handled by:
+Do not run the difficulty classes directly.
 
-```text
-db/JDBC.java
-db/Database.java
-```
-
-The database is:
-
-```text
-pakpakin
-```
-
-The table is:
-
-```text
-players
-```
-
-with the following columns:
-
-```text
-PK_number_id
-name
-highest_score
-```
-
-### Starting the Game
-
-Simply run:
+Start the game through:
 
 ```text
 Main.java
 ```
 
-The game will open with the **Name screen**. Enter a name and press **ENTER** to continue.# Pakpakin
+Make sure **MySQL is running in XAMPP before launching the game**, otherwise the game may not be able to connect to the database.
 
-## How to Run
+## 👥 Project
 
-1. Make sure **MySQL is running in XAMPP**.
-2. Make sure the **`pakpakin` database** exists in MySQL.
-3. Make sure the required **MySQL Connector/J** driver is included in the project.
-4. Open the project in VS Code.
-5. Run **`Main.java`**.
-
-### Main Entry Point
-
-The game starts from:
-
-```text
-Main.java
-```
-
-You **do not need to run `Name.java`, `Easy.java`, `Medium.java`, `Hard.java`, or the other screens separately**.
-
-`Main.java` connects the game's screens together:
-
-```text
-Main.java
-   ↓
-Name
-   ↓
-Loading Screen
-   ↓
-Main Menu
-   ↓
-Easy / Medium / Hard
-   ↓
-Victory / Defeat
-   ↓
-Main Menu
-```
-Test Package
-
-The test package contains files used for testing and development:
-
-test/
-├── Pakpakin.java
-└── App.java
-
-These files are test files only and are not used to start the final game.
-
-test/Pakpakin.java — testing
-
-test/App.java — testing
-
-### Database
-
-Pakpakin uses MySQL to store the player's:
-
-- Name
-- Highest score
-
-The database connection is handled by:
-
-```text
-db/JDBC.java
-db/Database.java
-```
-
-The database is:
-
-```text
-pakpakin
-```
-
-The table is:
-
-```text
-players
-```
-
-with the following columns:
-
-```text
-PK_number_id
-name
-highest_score
-```
-
-### Starting the Game
-
-Simply run:
-
-```text
-Main.java
-```
-
-The game will open with the **Name screen**. Enter a name and press **ENTER** to continue.
+**Pakpakin**  
+A Java-based Flappy Bird-style game project.
